@@ -1,23 +1,60 @@
 aid: biothea-pharmaceuticals
+
 name: Biothea Pharmaceuticals
-description: 'Biothea Pharmaceuticals is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Biothea Pharmaceuticals (Biothea Pharma Inc.) is a biopharmaceutical company focused on developing needle‑free, convenient, and cost‑effective treatments for severe allergic reactions and anaphylaxis. Their mission is to revolutionize the management of life‑threatening allergic events by providing innovative, patient‑friendly therapies. The company’s website is currently under construction, offering information about their technology, research focus, and contact details.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biothea-pharmaceuticals/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Biotech
+- Pharmaceuticals
+- Healthcare
+- Anaphylaxis
+- NeedleFree
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/biothea-pharmaceuticals-hosts.yml
+- type: DomainSecurity
+  url: security/biothea-pharmaceuticals-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: http://www.biotheapharma.com/
+
+# Coverage block added by contract module
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The website provides only static HTML with no machine‑readable API specification.
+  evidence:
+    - url: https://www.biotheapharma.com/
+      status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

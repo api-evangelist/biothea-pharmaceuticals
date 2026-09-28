@@ -1,0 +1,15 @@
+generated: '2026-09-28'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.biotheapharma.com
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Mar 31 22:06:39 2027 GMT
+  hsts: false
+domains:
+- domain: biotheapharma.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false
